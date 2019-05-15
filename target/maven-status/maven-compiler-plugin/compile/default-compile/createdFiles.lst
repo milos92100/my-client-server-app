@@ -1,0 +1,3 @@
+com\milos\client\App.class
+com\milos\domain\hello\Calculator.class
+com\milos\domain\util\CorrelationId.class
