@@ -5,3 +5,9 @@ test app: mvn clean package
 build app: mvn clean package
 
 run client app: mvn exec:java -Dexec.mainClass="com.milos.client.App"
+
+
+// multiple mains
+
+run server: mvn exec:java@server
+run client: mvn exec:java@client
