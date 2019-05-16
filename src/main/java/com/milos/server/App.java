@@ -1,8 +1,16 @@
 package com.milos.server;
 
-public class App {
-    public static void main(String[] args) {
+import com.milos.config.AppConfig;
 
-        System.out.println("Hello World from Server");
+import java.io.IOException;
+import java.util.ResourceBundle;
+
+public class App {
+
+    public static void main(String[] args) throws IOException {
+        AppConfig appConfig = AppConfig.fromResourceBundle(ResourceBundle.getBundle("config"));
+
+        Program program = new Program(appConfig);
+        program.run();
     }
 }
