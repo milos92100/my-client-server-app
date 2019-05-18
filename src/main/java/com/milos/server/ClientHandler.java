@@ -20,7 +20,10 @@ public class ClientHandler implements Runnable {
             Scanner in = new Scanner(socket.getInputStream());
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             while (in.hasNextLine()) {
-                out.println(in.nextLine().toUpperCase());
+                String line = in.nextLine();
+                System.out.println("received: " + line);
+
+                out.println(line);
             }
         } catch (Exception e) {
             System.out.println("Error:" + socket);

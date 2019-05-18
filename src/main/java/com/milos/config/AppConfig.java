@@ -1,6 +1,5 @@
 package com.milos.config;
 
-import com.sun.istack.internal.NotNull;
 
 import java.util.ResourceBundle;
 
@@ -20,7 +19,7 @@ public class AppConfig {
      * @throws IllegalStateException    if a property missing
      * @throws IllegalArgumentException if a property is not valid
      */
-    public static AppConfig fromResourceBundle(@NotNull ResourceBundle bundle) throws IllegalStateException, IllegalArgumentException {
+    public static AppConfig fromResourceBundle(ResourceBundle bundle) throws IllegalStateException, IllegalArgumentException {
         if (bundle == null) {
             throw new IllegalArgumentException("Bundle must not be null");
         }
@@ -34,6 +33,12 @@ public class AppConfig {
         );
     }
 
+    /**
+     * Throws IllegalStateException if a required configuration property is missing.
+     *
+     * @param bundle ResourceBundle
+     * @param key    String
+     */
     private static void throwIfMissing(ResourceBundle bundle, String key) {
         if (!bundle.containsKey(key)) {
             throw new IllegalStateException(key + " is missing from configuration");
