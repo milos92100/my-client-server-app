@@ -1,29 +1,22 @@
 package com.milos.client;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import com.milos.config.AppConfig;
 
-/**
- * Hello world!
- */
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.ResourceBundle;
+import java.util.Scanner;
+
 public class App {
 
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 1) {
-            System.err.println("Pass the server IP as the sole command line argument");
-            return;
-        }
+        AppConfig appConfig = AppConfig.fromResourceBundle(ResourceBundle.getBundle("config"));
 
         Socket socket = null;
 
         try {
-            socket = new Socket(args[0], 59898);
+            socket = new Socket(appConfig.getServerIp().getValue(), appConfig.getServerPort().getValue());
             System.out.println("Enter lines of text then Ctrl+D or Ctrl+C to quit");
 
             Scanner scanner = new Scanner(System.in);

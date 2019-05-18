@@ -5,11 +5,11 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class MessageProcessor implements Runnable {
+public class ClientHandler implements Runnable {
 
     private Socket socket;
 
-    MessageProcessor(Socket socket) {
+    ClientHandler(Socket socket) {
         this.socket = socket;
     }
 

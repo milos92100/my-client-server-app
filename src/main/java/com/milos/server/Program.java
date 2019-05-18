@@ -23,7 +23,7 @@ public class Program {
             System.out.println("The server is running...");
             ExecutorService pool = Executors.newFixedThreadPool(20);
             while (true) {
-                pool.execute(new MessageProcessor(listener.accept()));
+                pool.execute(new ClientHandler(listener.accept()));
             }
         } finally {
             if (listener != null) {
