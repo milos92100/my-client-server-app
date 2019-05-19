@@ -2,6 +2,8 @@ https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_SE/Maven.h
 
 https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 
+https://stackoverflow.com/questions/32577980/asynchronous-client-side-java-socket
+
 test app: mvn clean package
 
 build app: mvn clean package
