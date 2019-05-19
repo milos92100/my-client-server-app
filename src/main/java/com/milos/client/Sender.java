@@ -1,29 +1,45 @@
 package com.milos.client;
 
-import com.milos.domain.logger.PrimitiveLogger;
+import com.milos.domain.Message;
 
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.concurrent.BlockingQueue;
 
 public class Sender extends Thread {
-    private PrimitiveLogger logger;
     private PrintWriter writer;
-    private ClientInMemoryStore store;
+    private MessageSent callback;
+    private BlockingQueue<Message> messagesToSend;
 
-    public Sender(final OutputStream out, final ClientInMemoryStore store, final PrimitiveLogger logger) {
-        this.logger = logger;
-        this.writer = new PrintWriter(out, true);
-        this.store = store;
+    public interface MessageSent {
+        void messageSent(Message message);
+    }
+
+    public Sender(final OutputStream outputStream,
+                  final BlockingQueue<Message> messagesToSend,
+                  final MessageSent callback) {
+        if (outputStream == null) {
+            throw new IllegalArgumentException("outputStream mast not be null");
+        }
+        if (messagesToSend == null) {
+            throw new IllegalArgumentException("messagesToSend mast not be null");
+        }
+        if (callback == null) {
+            throw new IllegalArgumentException("callback mast not be null");
+        }
+
+        this.writer = new PrintWriter(outputStream, true);
+        this.messagesToSend = messagesToSend;
+        this.callback = callback;
     }
 
     @Override
     public void run() {
         while (!isInterrupted()) {
-            String message = store.pollMessageToSend();
+            Message message = messagesToSend.poll();
             if (message != null) {
-                writer.println(message);
-                //store.appendToProcessingMessages(message);
-                logger.info("sent: '" + message + "'");
+                writer.println(message.toJson());
+                callback.messageSent(message);
             }
         }
     }
