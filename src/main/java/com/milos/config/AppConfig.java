@@ -1,8 +1,11 @@
 package com.milos.config;
 
-
 import java.util.ResourceBundle;
 
+/**
+ * This class is used to provide access to configuration
+ * properties of the application
+ */
 public class AppConfig {
     private static final String SERVER_PORT = "serverPort";
     private static final String SERVER_IP = "serverIp";

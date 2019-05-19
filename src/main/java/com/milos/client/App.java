@@ -14,7 +14,6 @@ public class App {
     public static void main(String[] args) throws Exception {
         AppConfig appConfig = AppConfig.fromResourceBundle(ResourceBundle.getBundle("config"));
         StreamLogger logger = new StreamLogger(System.out, "client");
-        ProcessingMessagesStore store = new ProcessingMessagesStore();
 
         final BlockingQueue<Message> accountMessagesQueue = new ArrayBlockingQueue<Message>(100);
         final BlockingQueue<Message> userMessagesQueue = new ArrayBlockingQueue<Message>(100);
@@ -30,7 +29,7 @@ public class App {
              * with some other system that provides changes and messages that will
              * be synchronized
              */
-            new Thread(new Demo(accountMessagesQueue, userMessagesQueue, 1)).start();
+            new Thread(new Demo(accountMessagesQueue, userMessagesQueue, 10000)).start();
 
 
             /* Sync is used to await and dispatch messages that are created by the
@@ -40,10 +39,10 @@ public class App {
              */
 
             // Sync account messages form domain logic
-            new Thread(new Sync(socket, accountMessagesQueue, store, logger)).start();
+            new Thread(new Sync(socket, accountMessagesQueue, logger)).start();
 
             // Sync user messages form domain logic
-            new Thread(new Sync(socket, userMessagesQueue, store, logger)).start();
+            new Thread(new Sync(socket, userMessagesQueue, logger)).start();
 
         } catch (Exception e) {
             logger.error(e.getMessage());

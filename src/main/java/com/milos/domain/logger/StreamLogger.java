@@ -20,6 +20,12 @@ public class StreamLogger implements PrimitiveLogger, Closeable {
     private String appName;
 
     public StreamLogger(final PrintStream out, final String appName) {
+        if (out == null) {
+            throw new IllegalArgumentException("out mast not be null");
+        }
+        if (appName == null) {
+            throw new IllegalArgumentException("appName mast not be null");
+        }
         this.out = out;
         this.appName = appName;
     }

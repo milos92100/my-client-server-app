@@ -10,7 +10,7 @@ import static com.milos.domain.Answer.Type.REJECTED;
 import static com.milos.domain.Message.Type.ACCOUNT_CHANGE;
 import static com.milos.domain.Message.Type.USER_CHANGE;
 
-public final class MessageProcessor implements Receiver.MessageReceived {
+public class MessageProcessor implements Receiver.MessageReceived {
 
     private PrimitiveLogger logger;
     private MessageStore messageStore;
@@ -20,7 +20,7 @@ public final class MessageProcessor implements Receiver.MessageReceived {
         this.messageStore = messageStore;
     }
 
-    private void process(Message message) throws InterruptedException {
+    protected void process(Message message) throws InterruptedException {
         if (message.typeOf(ACCOUNT_CHANGE)) {
             messageStore.getAccountMessagesQueue().put(message);
         }
@@ -30,7 +30,7 @@ public final class MessageProcessor implements Receiver.MessageReceived {
         }
     }
 
-    private boolean invalid(Message message) {
+    protected boolean invalid(Message message) {
         return !message.typeOf(ACCOUNT_CHANGE) && !message.typeOf(USER_CHANGE);
     }
 

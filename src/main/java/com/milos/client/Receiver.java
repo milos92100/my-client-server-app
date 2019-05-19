@@ -15,11 +15,22 @@ public class Receiver extends Thread {
         void answerReceived(Answer answer);
     }
 
-    public Receiver(final InputStream in, final AnswerReceived callback, final PrimitiveLogger logger) {
-        this.reader = new Scanner(in);
+    public Receiver(final InputStream inputStream,
+                    final AnswerReceived callback,
+                    final PrimitiveLogger logger) {
+        if (inputStream == null) {
+            throw new IllegalArgumentException("inputStream mast not be null");
+        }
+        if (callback == null) {
+            throw new IllegalArgumentException("callback mast not be null");
+        }
+        if (logger == null) {
+            throw new IllegalArgumentException("logger mast not be null");
+        }
+
+        this.reader = new Scanner(inputStream);
         this.callback = callback;
         this.logger = logger;
-
     }
 
     @Override
