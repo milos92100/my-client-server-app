@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="084c88b5-9117-43f0-956f-08e4e8e8f371" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FisAssignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FisAssignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMemoryStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMemoryStore.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMemoryStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state relative-caret-position="543">
+              <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#225#233#0" expanded="true" />
@@ -159,12 +153,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/message/JsonSerializableMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/message/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMememoryStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMemoryStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/Demo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/Receiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/Sender.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/Sync.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMemoryStore.java" />
       </list>
     </option>
   </component>
@@ -190,7 +184,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -237,82 +231,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="milos" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-              <item name="hello" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -320,7 +238,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558227152108" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558227332528" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -471,7 +389,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2885906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2543624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -732,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMemoryStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="543">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#225#233#0" expanded="true" />

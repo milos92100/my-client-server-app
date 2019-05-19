@@ -35,7 +35,7 @@ public class ClientInMemoryStore {
         synchronized (processingMessages) {
             Iterator<ProcessingMessage> it = processingMessages.iterator();
             while (it.hasNext()) {
-                if (it.next().message == message) {
+                if (it.next().message.equals(message)) {
                     it.remove();
                     return true;
                 }
