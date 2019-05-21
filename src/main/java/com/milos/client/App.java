@@ -18,11 +18,15 @@ public class App {
         final BlockingQueue<Message> accountMessagesQueue = new ArrayBlockingQueue<Message>(100);
         final BlockingQueue<Message> userMessagesQueue = new ArrayBlockingQueue<Message>(100);
 
-        Socket socket = null;
+        Socket accountSocket = null;
+        Socket userSocket = null;
 
         try {
-            socket = new Socket(appConfig.getServerIp().getValue(), appConfig.getServerPort().getValue());
-            logger.info("Connected:" + socket);
+            accountSocket = SocketHelper.createFromAppConfig(appConfig);
+            logger.info("Account socket connected:" + accountSocket);
+
+            userSocket = SocketHelper.createFromAppConfig(appConfig);
+            logger.info("User socket connected:" + userSocket);
 
             /* This is used only for demonstration of the system,
              * and should be treated or imagined as some integration layer
@@ -39,17 +43,40 @@ public class App {
              */
 
             // Sync account messages form domain logic
-            new Thread(new Sync(socket, accountMessagesQueue, logger)).start();
+            final Socket finalAccountSocket = accountSocket;
+            new Thread(
+                    new Sync(
+                            "AccountSync",
+                            accountSocket.getOutputStream(),
+                            accountSocket.getInputStream(),
+                            accountMessagesQueue,
+                            new Sync.LifeCycle() {
+                                public void finished() {
+                                    SocketHelper.closeWithRetry(finalAccountSocket);
+
+                                }
+                            }, logger)).start();
 
             // Sync user messages form domain logic
-            new Thread(new Sync(socket, userMessagesQueue, logger)).start();
+            final Socket userAccountSocket = userSocket;
+            new Thread(
+                    new Sync(
+                            "UserSync",
+                            userAccountSocket.getOutputStream(),
+                            userAccountSocket.getInputStream(),
+                            userMessagesQueue,
+                            new Sync.LifeCycle() {
+                                public void finished() {
+                                    SocketHelper.closeWithRetry(userAccountSocket);
+
+                                }
+                            }, logger)).start();
 
         } catch (Exception e) {
             logger.error(e.getMessage());
 
-            if (socket != null) {
-                socket.close();
-            }
+            SocketHelper.closeWithRetry(accountSocket);
+            SocketHelper.closeWithRetry(userSocket);
 
             logger.close();
         }

@@ -10,6 +10,11 @@ import static com.milos.domain.Answer.Type.REJECTED;
 import static com.milos.domain.Message.Type.ACCOUNT_CHANGE;
 import static com.milos.domain.Message.Type.USER_CHANGE;
 
+/**
+ * MessageProcessor is used to process messages that are received
+ * through its implementation of the Receiver callback. It will propagate
+ * messages to queses according to their type.
+ */
 public class MessageProcessor implements Receiver.MessageReceived {
 
     private PrimitiveLogger logger;

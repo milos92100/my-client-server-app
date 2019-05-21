@@ -2,6 +2,7 @@ package com.milos.server;
 
 import com.milos.domain.Answer;
 import com.milos.domain.Message;
+import com.milos.domain.logger.PrimitiveLogger;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,15 +17,18 @@ public class Receiver implements Runnable {
 
     private Socket socket;
     private MessageReceived callback;
+    private PrimitiveLogger logger;
 
-    public Receiver(final Socket socket, final MessageReceived callback) {
+    public Receiver(final Socket socket, final MessageReceived callback, PrimitiveLogger logger) {
         this.socket = socket;
         this.callback = callback;
+        this.logger = logger;
     }
 
     @Override
     public void run() {
         try {
+            logger.info("Connected: " + socket);
             Scanner in = new Scanner(socket.getInputStream());
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             while (in.hasNextLine()) {
@@ -34,14 +38,14 @@ public class Receiver implements Runnable {
                 out.println(answer.toJson());
             }
         } catch (Exception e) {
-            System.out.println("Error:" + socket);
+            logger.error("Error:" + socket + ";" + e.getMessage());
         } finally {
             try {
                 socket.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error(e.getMessage());
             }
-            System.out.println("Closed: " + socket);
+            logger.error("Closed: " + socket);
         }
     }
 

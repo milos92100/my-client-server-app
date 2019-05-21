@@ -43,6 +43,7 @@ public class Demo implements Runnable {
                         //TODO investigate when this exception can be raised and take proper actions
                     }
                 }
+                System.out.println("Demo: accountMessagesQueue finished");
             }
         }).start();
 
@@ -56,6 +57,7 @@ public class Demo implements Runnable {
                         //TODO investigate when this exception can be raised and take proper actions
                     }
                 }
+                System.out.println("Demo: userMessagesQueue finished");
             }
         }).start();
     }

@@ -4,7 +4,7 @@ https://maven.apache.org/guides/introduction/introduction-to-the-standard-direct
 
 https://stackoverflow.com/questions/32577980/asynchronous-client-side-java-socket
 
-test app: mvn clean package
+test app: mvn test
 
 build app: mvn clean package
 

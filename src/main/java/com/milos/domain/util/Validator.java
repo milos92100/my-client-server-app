@@ -2,6 +2,12 @@ package com.milos.domain.util;
 
 public class Validator {
 
+    public static void nullIsIllegal(Object obj, String target) {
+        if (obj == null) {
+            throw new IllegalArgumentException(target + " mast not be null");
+        }
+    }
+
     public static boolean validIP(String ip) {
         try {
             if (ip == null || ip.isEmpty()) {

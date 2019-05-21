@@ -21,6 +21,10 @@ public class App {
         AppConfig appConfig = AppConfig.fromResourceBundle(ResourceBundle.getBundle("config"));
         PrimitiveLogger logger = new StreamLogger(System.out, "server");
 
+        /*
+            MessageStore is used as an container for queues
+            TODO: maybe implement some map for MsgType and Queue
+         */
         MessageStore messageStore = new MessageStore();
         SharedState sharedState = new SharedState();
 
@@ -29,7 +33,7 @@ public class App {
          * message, for example duration of processing the message and
          * average duration of all messages that was captured at that time
          */
-        final BlockingQueue<MessageStats> messageStatsQueue = new ArrayBlockingQueue<MessageStats>(100);
+        final BlockingQueue<MessageStats> messageStatsQueue = new ArrayBlockingQueue<MessageStats>(1000);
 
         MessageProcessor messageProcessor = new MessageProcessor(logger, messageStore);
 
@@ -58,9 +62,9 @@ public class App {
 
             new Thread(statsWorker).start();
 
-            pool = Executors.newFixedThreadPool(20);
+            pool = Executors.newFixedThreadPool(10);
             while (true) {
-                pool.execute(new Receiver(server.accept(), messageProcessor));
+                pool.execute(new Receiver(server.accept(), messageProcessor, logger));
             }
         } catch (IOException e) {
             logger.error(e.getMessage());

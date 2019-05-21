@@ -2,7 +2,6 @@ package com.milos.domain;
 
 import com.google.gson.Gson;
 
-
 import java.util.Date;
 import java.util.UUID;
 
@@ -65,5 +64,16 @@ public class Message implements JsonSerializable {
                 ", type='" + type + '\'' +
                 ", payload='" + payload + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (null == o) return false;
+        if (!(o instanceof Message)) return false;
+        Message message = (Message) o;
+        return this.id.equals(message.id) &&
+                this.createdAt.equals(message.createdAt) &&
+                this.type.equals(message.type) &&
+                this.payload.equals(message.payload);
     }
 }

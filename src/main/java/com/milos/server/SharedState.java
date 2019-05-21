@@ -24,7 +24,6 @@ public class SharedState {
             messageCount++;
 
             return durationSumInMillis / messageCount;
-
         } finally {
             writeLock.unlock();
         }

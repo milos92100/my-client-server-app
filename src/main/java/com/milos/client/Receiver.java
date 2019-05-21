@@ -6,7 +6,16 @@ import com.milos.domain.logger.PrimitiveLogger;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class Receiver extends Thread {
+/**
+ * This class is used to receive data from the given stream
+ * and deserialize them to the Answer object and notify the
+ * subscriber.
+ *
+ * @author Milos Stojanovic
+ * @version 1.0
+ * @see com.milos.domain.Answer
+ */
+public class Receiver implements Runnable {
     private PrimitiveLogger logger;
     private Scanner reader;
     private AnswerReceived callback;
@@ -36,7 +45,7 @@ public class Receiver extends Thread {
     @Override
     public void run() {
         try {
-            while (!isInterrupted()) {
+            while (!Thread.currentThread().isInterrupted()) {
                 if (reader.hasNextLine()) {
                     String line = reader.nextLine();
                     Answer answer = Answer.fromJson(line);
