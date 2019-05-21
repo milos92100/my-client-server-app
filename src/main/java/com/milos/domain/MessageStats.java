@@ -9,6 +9,9 @@ public class MessageStats {
     private long capturedAvgDurationInMillis;
 
     public MessageStats(UUID messageId, long processDurationInMillis, long capturedAvgDurationInMillis) {
+        if (messageId == null) {
+            throw new IllegalArgumentException("messageId must not be null");
+        }
         this.messageId = messageId;
         this.processDurationInMillis = processDurationInMillis;
         this.capturedAvgDurationInMillis = capturedAvgDurationInMillis;

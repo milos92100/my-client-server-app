@@ -4,6 +4,9 @@ import com.google.gson.Gson;
 
 import java.util.UUID;
 
+/**
+ * Answer represents the response form the server for a received message.
+ */
 public class Answer implements JsonSerializable {
 
     public static class Type {

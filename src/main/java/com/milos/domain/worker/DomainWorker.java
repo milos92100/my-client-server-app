@@ -8,6 +8,10 @@ import com.milos.server.SharedState;
 import java.util.Date;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * Domain worker is used to calculate messages stats
+ * and publish the result to the result queue.
+ */
 public class DomainWorker implements Runnable {
 
     private SharedState sharedState;

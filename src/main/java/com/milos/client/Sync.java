@@ -7,7 +7,6 @@ import com.milos.domain.Message;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.Socket;
 import java.util.concurrent.BlockingQueue;
 
 import static com.milos.domain.Answer.Type.ACKNOWLEDGED;

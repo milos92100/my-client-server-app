@@ -20,6 +20,15 @@ public class Receiver implements Runnable {
     private PrimitiveLogger logger;
 
     public Receiver(final Socket socket, final MessageReceived callback, PrimitiveLogger logger) {
+        if (socket == null) {
+            throw new IllegalArgumentException("socket must not be null");
+        }
+        if (callback == null) {
+            throw new IllegalArgumentException("callback must not be null");
+        }
+        if (logger == null) {
+            throw new IllegalArgumentException("logger must not be null");
+        }
         this.socket = socket;
         this.callback = callback;
         this.logger = logger;

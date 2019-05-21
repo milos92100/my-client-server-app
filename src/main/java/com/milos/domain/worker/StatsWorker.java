@@ -7,6 +7,11 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * StatsWorker polls message stats form source queue,
+ * formats the data to a readable string and sends it to
+ * console output stream.
+ */
 public class StatsWorker implements Runnable {
 
     private BlockingQueue<MessageStats> sourceQueue;
