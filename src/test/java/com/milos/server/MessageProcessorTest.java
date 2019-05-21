@@ -66,7 +66,6 @@ public class MessageProcessorTest extends TestCase {
         assertTrue(accountAnswer.messageWas(Answer.Type.ACKNOWLEDGED));
         assertTrue(actualAccountMessage.equals(accountMessage));
 
-
         Answer userAnswer = processor.messageReceived(userMessage);
         Message actualUserMessage = store.getUserMessagesQueue().poll();
 

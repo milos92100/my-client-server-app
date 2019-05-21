@@ -2,31 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="084c88b5-9117-43f0-956f-08e4e8e8f371" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_27_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/SocketHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/milos/domain/util/TimeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/milos/MockedLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/milos/config/ServerPortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/milos/server/MessageProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FisAssignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FisAssignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/client/Sync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/client/Sync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/domain/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/domain/util/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/domain/util/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/server/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/server/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENCE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LICENCE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/domain/logger/StreamLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/domain/logger/StreamLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/server/MessageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/server/MessageProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/server/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/server/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/server/SharedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/server/SharedState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/milos/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/milos/server/MessageStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/milos/server/MessageStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/milos/server/MessageProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/milos/server/MessageProcessorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,36 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/MessageProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/domain/Message.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/Receiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#1073#1074#0" expanded="true" />
-                <element signature="e#1118#1119#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/domain/logger/StreamLogger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+            <state relative-caret-position="240">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LICENCE.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/config/ServerPort.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/config/ServerIp.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
@@ -111,7 +66,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/message/JsonSerializable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/ClientInMemoryStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/message/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/milos/server/MessageStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/ProcessingMessagesStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/MessageStats.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/server/StatsWorker.java" />
@@ -136,14 +90,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/Sync.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/client/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/Answer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/logger/StreamLogger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/milos/server/MessageProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/server/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/milos/config/ServerIpTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/milos/MockedLogger.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/milos/server/MessageProcessorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/Message.java" />
+        <option value="$PROJECT_DIR$/LICENCE.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/milos/domain/logger/StreamLogger.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/milos/server/MessageProcessorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/milos/server/MessageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/milos/server/MessageStore.java" />
       </list>
     </option>
   </component>
@@ -223,36 +179,6 @@
               <item name="milos" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FisAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-client-server-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="milos" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -262,7 +188,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558468346675" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558469206014" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -283,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MessageProcessorTest.testMessageIsPutOnQueue">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.milos.client.App" />
       <module name="FisAssignment" />
@@ -457,7 +383,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23892617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23892617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -529,13 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENCE.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -569,16 +488,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/client/ProcessingMessagesStore.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/MessageStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/domain/MessageStats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -617,16 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/Receiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,16 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="66" column="68" selection-start-line="66" selection-start-column="68" selection-end-line="66" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/milos/config/ServerIpTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -807,16 +696,6 @@
           <folding>
             <element signature="e#298#299#0" expanded="true" />
             <element signature="e#329#330#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/domain/logger/StreamLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -870,18 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/milos/server/MessageProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="63" column="78" selection-start-line="63" selection-start-column="78" selection-end-line="63" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#151#152#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -889,23 +756,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/MessageProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/domain/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="-1">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/milos/server/MessageProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/domain/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/domain/logger/StreamLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="432">
+          <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
           <folding>
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1556#1557#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1805#1806#0" expanded="true" />
+            <element signature="e#1849#1850#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENCE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/MessageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/MessageStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/milos/server/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

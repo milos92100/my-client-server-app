@@ -21,10 +21,22 @@ public class MessageProcessor implements Receiver.MessageReceived {
     private MessageStore messageStore;
 
     public MessageProcessor(PrimitiveLogger logger, MessageStore messageStore) {
+        if (logger == null) {
+            throw new IllegalArgumentException("logger must not be null");
+        }
+        if (messageStore == null) {
+            throw new IllegalArgumentException("messageStore must not be null");
+        }
         this.logger = logger;
         this.messageStore = messageStore;
     }
 
+    /**
+     * Puts the given message on a queue depending of on the message type
+     *
+     * @param message Message
+     * @throws InterruptedException
+     */
     protected void process(Message message) throws InterruptedException {
         if (message.typeOf(ACCOUNT_CHANGE)) {
             messageStore.getAccountMessagesQueue().put(message);
@@ -35,6 +47,12 @@ public class MessageProcessor implements Receiver.MessageReceived {
         }
     }
 
+    /**
+     * Checks if the type fot the given message is valid
+     *
+     * @param message Message
+     * @return boolean
+     */
     protected boolean invalid(Message message) {
         return !message.typeOf(ACCOUNT_CHANGE) && !message.typeOf(USER_CHANGE);
     }
